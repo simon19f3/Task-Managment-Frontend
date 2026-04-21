@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@theme {
+  /* Map your custom variables to Tailwind utility names */
+  --color-background: rgb(var(--background));
+  --color-text-primary: rgb(var(--text-primary));
+  --color-text-secondary: rgb(var(--text-secondary));
+  --color-text-muted: rgb(var(--text-muted));
+  
+  --color-card-bg: rgb(var(--card-bg));
+  --color-card-border: rgb(var(--card-border));
+  
+  --color-input-bg: rgb(var(--input-bg));
+  --color-input-border: rgb(var(--input-border));
+  
+  --color-accent-1: rgb(var(--accent-1));
+  --color-accent-2: rgb(var(--accent-2));
+  --color-accent-3: rgb(var(--accent-3));
+  
+  --color-error: rgb(var(--error));
+}
+
+@layer base {
+  :root {
+    --background: 245 247 252;
+    --card-bg: 255 255 255;
+    --card-border: 226 232 240;
+    --text-primary: 15 23 42;
+    --text-secondary: 71 85 105;
+    --text-muted: 100 116 139;
+    --input-bg: 255 255 255;
+    --input-border: 203 213 225;
+    --accent-1: 255 100 150;
+    --accent-2: 100 150 255;
+    --accent-3: 255 200 100;
+    --error: 239 68 68;
+  }
+
+  .dark {
+    --background: 9 13 25;
+    --card-bg: 30 41 59; /* Slate-800 equivalent for dark card */
+    --card-border: 255 255 255 / 0.1;
+    --text-primary: 255 255 255;
+    --text-secondary: 148 163 184;
+    --text-muted: 100 116 139;
+    --input-bg: 255 255 255 / 0.05;
+    --input-border: 255 255 255 / 0.1;
+  }
+
+  body {
+    @apply bg-background text-text-primary antialiased transition-colors duration-300;
+  }
+}
+
+/* Reusable Glass Effect */
+@utility card-glass {
+  background-color: rgb(var(--card-bg) / 0.8);
+  border: 1px solid rgb(var(--card-border));
+  backdrop-filter: blur(20px);
+}
