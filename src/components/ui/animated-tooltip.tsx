@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { motion, useTransform, AnimatePresence, useMotionValue, useSpring } from "motion/react";
-import type { User } from "@/features/tasks/data/mockTasks";
+import type { User } from "@/features/auth/types";
 
 export const AnimatedTooltip = ({ items }: { items: User[] }) => {
   const [hoveredIndex, setHoveredIndex] = useState<string | null>(null);

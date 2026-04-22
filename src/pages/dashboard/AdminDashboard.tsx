@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Input } from "@/components/ui/input";
 import { ListFilter, Search } from "lucide-react";
@@ -18,7 +18,7 @@ export default function AdminDashboard() {
   const [status, setStatus] = useState<TaskStatus | undefined>(undefined);
 
   // FETCHING REAL DATA
-  const { data: tasks = [], isLoading, refetch } = useTask({ search, status });
+  const { data: tasks = [], isLoading } = useTask({ search, status });
 
   const columns: ColumnDef<Task>[] = [
     {

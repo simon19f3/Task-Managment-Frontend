@@ -1,14 +1,7 @@
 "use client";
-import { useState } from "react";
-import { Sidebar, SidebarBody, SidebarLink } from "../../components/ui/sidebar";
-import {
-  IconArrowLeft,
-  IconBrandTabler,
-  IconSettings,
-  IconUserBolt,
-} from "@tabler/icons-react";
+
 import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
+
 
 
 

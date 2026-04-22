@@ -25,8 +25,7 @@ import {
   Plus, 
   Check, 
   ChevronsUpDown, 
-  Loader2,
-  Users as UsersIcon
+  Loader2
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 

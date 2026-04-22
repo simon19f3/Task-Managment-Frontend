@@ -24,7 +24,7 @@ const ProtectedLayout = () => {
   };
   
    const mainHref = user?.role === 'admin' ? '/admin' : '/dashboard';
-  const label = user?.role === 'admin' ? 'Admin Panel' : 'Dashboard';
+  // const label = user?.role === 'admin' ? 'Admin Panel' : 'Dashboard';
   
   const links = [
     { label: "Dashboard", href: mainHref, icon: <IconBrandTabler className="h-5 w-5 shrink-0 text-text-secondary" /> },
